@@ -49,7 +49,7 @@ if st.button("Analyze Review"):
         st.write(f"⭐ {result.rating} / 5")
 
         st.subheader("Confidence")
-        st.progress(result["confidence"])
+        st.progress(result.confidence)
         st.write(result.confidence)
 
         st.subheader("Positive Points")
