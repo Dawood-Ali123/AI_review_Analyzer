@@ -40,25 +40,25 @@ if st.button("Analyze Review"):
         st.success("Analysis Complete")
 
         st.subheader("Summary")
-        st.write(result["summary"])
+        st.write(result.summary)
 
         st.subheader("Sentiment")
-        st.write(result["sentiment"])
+        st.write(result.sentiment)
 
         st.subheader("Rating")
-        st.write(f"⭐ {result['rating']} / 5")
+        st.write(f"⭐ {result.rating} / 5")
 
         st.subheader("Confidence")
         st.progress(result["confidence"])
-        st.write(result["confidence"])
+        st.write(result.confidence)
 
         st.subheader("Positive Points")
-        for point in result["positive_points"]:
+        for point in result.positive_points:
             st.success(point)
 
         st.subheader("Negative Points")
-        for point in result["negative_points"]:
+        for point in result.negative_points:
             st.error(point)
 
         st.subheader("Recommendation")
-        st.info(result["recommendation"])
+        st.info(result.recommendation)
